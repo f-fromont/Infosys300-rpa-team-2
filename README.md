@@ -30,3 +30,11 @@ The implementation of a group RPA project for the Infosys300/softeng762 course
 
 4. Email responses - optional
 - maybe monitor any emails being returned and either send a automated no-response, or maybe send an email to designated lecturer
+
+## Things to remember
+As you are developing the tasks, remember:
+- follow naming conventions and standards used for UIPath and brought up in the course
+- Add comments for the header or start of the task to explain what it does
+- Add logging at all the important steps in a task
+- Perform error checks and validations, and log any errors
+- use recommended UI Path activites for the corresponding tasks like Input and outputs
