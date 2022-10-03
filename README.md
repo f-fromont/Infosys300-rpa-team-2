@@ -28,7 +28,11 @@ The implementation of a group RPA project for the Infosys300/softeng762 course
 - send the email,
 - if any error, make sure to log and showcase to whoever is running bot
 
-4. Email responses - optional
+4. Summary Task
+- shows a summary of the work flow
+- things like upi's for each group, number of people in each group, email sent status
+
+5. Email responses - optional
 - maybe monitor any emails being returned and either send a automated no-response, or maybe send an email to designated lecturer
 
 ## Things to remember
