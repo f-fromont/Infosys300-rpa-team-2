@@ -3,7 +3,7 @@
     <x:Property Name="EmailDictionary" Type="OutArgument(scg:IDictionary(x:String, scg:List(x:String)))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1187,3829</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1187,3705</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,7 +96,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StudentGroupScrapingStep" sap:VirtualizedContainerService.HintSize="1197,3764" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StudentGroupScrapingStep" sap:VirtualizedContainerService.HintSize="1197,3640" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IDictionary(x:String, scg:List(x:String))" Name="GroupDictionary" />
     </Sequence.Variables>
@@ -105,13 +105,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RPA Bot Test Course" sap:VirtualizedContainerService.HintSize="1155,3572" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RPA Bot Test Course" sap:VirtualizedContainerService.HintSize="1155,3448" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1121,3356" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1121,3232" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="si:FileInfo" Name="GroupDataFile" />
               <Variable x:TypeArguments="sd:DataTable" Name="PeopleDataTable" />
@@ -126,7 +126,7 @@
                 <uix:TargetAnchorable BrowserURL="https://canvas.instructure.com/courses/5391002/users" DesignTimeRectangle="86, 403, 156, 42" ElementType="Text" FriendlyName="'People'" FullSelectorArgument="&lt;webctrl aaname='People' parentid='section-tabs' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='People' parentid='section-tabs' tag='A' type='' check:text='People' /&gt;" Guid="2d765153-4fe2-4000-980d-6e437c3b2b7a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAuCAYAAACvdRKFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7Zr9U1RVGMf7h/qhmX5oxmkcm6GxNM3MkRjLQXypfCk0RnQoNUUMU0wRm9VCK53GBp0xkwaNkCAIgngTcnwBBaII2NXlZSHgie/DPXfuvV5ubLvs2a3nM3MGOOe55+zMfvY5zznLYyQIGhEBBa2YAj4+L4mbIMQSEVDQiggoaEUEFLQiAgpaEQEFrYiAglZEQEErIqCgFRFQ0IoIKGhFBBS0MisBB/wBqqqte6T9VNdAvX/20eTkpBEZPzTdaKNX1m2iDVt30L3ObqNXiDdmJWDtL43muFtL25JBt+92GNHxgXrNzy5fRXfa7xm9QrwRtoBZ2Qfp+KkzdNRXSGs2v0NPzH+O+xcnp8aVhCJgYhC2gPjdSvXP9TRv4TIe++jjT+JmOxYBE4OIBRweHqGM9/bx2JbMXTQ4NGSMEI2N/UUtbTe5XsRP/D0TgQcPeW7E3m7voPHxcWNkGoj9MBjkOIzh7+6e3zm+saWVQqGQETmNl4B4FrUrath4rmP/D0Qs4MhIiLbvzuGx9W9vZ0nwZpZVVlPSshTzObQFL6yk4mtltjfbH3hA2YeOmVu5aotWrqbK6loz1rrOhcvFlHv0hO2ZF1etpebWXzkWzCQg1nt3/4ePrLctay/1D/iNKCFWRCxgzx+9tCL1DR7b/UEeZzm1LT+5YBHlnzzNWeqL8xdYQPSrOYaGh2nn3lx+FmOoLb8p+Y42pGdyH2IxF7AK+FTSEhY0r+AUHS44yZKhH88hQwI3Aa3rrX4zna5+X07Xpz4ob01lbvShvsU6QuwIW8CyiioaCAS41dQ3mLIgo1RU11AwOEivb93BfWe/umjLdqXlldyvREU8nntmaTK13rxlRBFvsQeOFHBs+s49LI5VQPQhkykgKaRUrwG4CXjtegXH4AODD44CWXtTRhbPgesbIXaELaBbw5taeO48i9M2JdL8xSvo6eeXU9GlK5z9VMPWibGUdZup3++nQ/k+fh41JGpJK5AKY9jGcbq2CojMZwUfBsyJMWRa4BQQry0nL5/7sN3+WGO/08zYlc1jeI1C7PjXAmLLxEUvarGOzi4z0/2TrGiQBRloJqGAEhnjmNNLQLcxp4DWGK8mAsaWiGtAJ/WNzZwRkbkamm+Y27W1YctDxlNCIBNat2qArVBtq5jTS0DMhwMQxo75CrnPKWBodNSs/w7kHXd9XWheJ3Uh+kRdwK7femhpShrHosD3wnfmHMc5r29ASWk5j2EuzOkl4P2ubr4IxxieA04Bgdd6gh6iLqD1AJG6cZut2EeGQV2ILRvg/g4nXWS5i5e/NbNgb18/P4s53s89QqNjYzYBUTMGB6cFwno4PaMfEkJG4CYgDjo48GC9oq+LaWJigvvxs66hia5cLeX5hNgRdQFBx/1OvpdDPK5icOpEw+/owykYWyLe7BOffs5CoH9JyhpKTttofrOCOXApDZw1nKpBF778Kv/tlNhNQKznO33WXA/PWudAzVnf1MKxQmyYEwFBX/8AZ0IlHRrqws++LLKdeJF9fqiqoZdeW2/G4RlkPnxDobAKmLknx3aZjHkvFZfYspebgMBtPcyDu0BkSGctKswtsxIwEiAFLodnU3MhRn3V5sStBkQf4tVWGi5e6wmxYc4FjBZuAgqJjwgoaCVhBMQ2qf6z5taddqNXSHQSRkDhv4kIKGhFBBS0IgIKWhEBBa2IgIJWREBBKyKgoBURUNCKCChoRQQUtGIKKAg6EAEFjRD9DT3Y5exDrAxBAAAAAElFTkSuQmCC" InformativeScreenshot="03e97bff19a8376b5bf13fce08c4ffd3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Course Roster: RPA Bot Test Course' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Group 1'" sap:VirtualizedContainerService.HintSize="761,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click the group tab" sap:VirtualizedContainerService.HintSize="1079,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://canvas.instructure.com/courses/5391002/users" DesignTimeRectangle="384, 267, 91, 39" ElementType="Text" FriendlyName="'Group 1'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='ui-id-2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='ui-id-2' tag='A' type='' aaname='       Group 1     ' /&gt;" Guid="a2ccdfbb-cdcc-46b1-a99c-70cc6795d0ac" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAArCAYAAAAe/1QiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP5SURBVHhe7ZjNSxtBGIcF/wyv3nr06NVjjjn26jE3W4RapEigSAUvUihVxEOClOYg1pREDMGSBGlcWjElWJZgCUEUt2prQmT59Z2P1d01m0aadtYyDwxk3p2d3X3m3ZnZDECjDC1fIVq+QrR8hWj5CtHyFaLlK0TLV4iWrxAtXyFavkK0fIVo+Qrps/w2rOpnxOfTePD4HQYnRBme3kTsbQXmuS3b3TPqBsYn6VlWDmSgP/RPvn2KreUMhkj20JMMYss7SJSq2MjuYGohg2E2EJM5bBzL9vcCG9ZuAWNOIoVTfgtGMs1vMPLGhNUpwc9NJLI1NGU1/LRhZnM8acaSBcRCK79eRoRubuh1pXe5l2doXsnfrQtY5646w27xGC8t/2jaaP6g+I+WrDv446x+gaZzurzO7fNu09zZ5uLHsw2qHSAeVvnmWoayPo25L73P6cUV8TDWx22MsgejMrXLzqeMy+dvXnVZoqvU9rr7EyRmKT5rgKm5wR8X9Wj2EJV1kcVOf8Pzn2F2vd02DZwzSKGVf4aNBfZA2yj27l7In85g7Fkei6UajKoJ8xKwPuRo3UgjRlOUxd8EWsT3SojQYIwmTflm3U3+IJ0bTVbRYG8QvVGNkhjwyLr37GBCK18+4EQBRRnx4LzqvimEy5/IYLHmHrEa5p5S/OXt6ctcZ29XDqnvrHZH+bf6O0NqnuJPSzBkpDuhz/zO8hvZTTrGjosSzZ7wOJf/3IDJa5IjA1FXGw/VEkbomJia7ii/gzTzPbsv2n2dy0BXQjznG2/YTodlsQy4ufopMv5r2SOWy/fL+yYWbiHYh2dg/ly+SIpNJI5koCshlu/sdkaWD4J3O76s7ii/W+bvF/g3RL8yXyRMHlu/3/gQYZaPnySTPQwtlHmvjmt6kU+1xTjFaSdiyYjAhrHK+nemCTnVzZS905Z9iIUZd79SPiWFB7secJ0gQi2fsI+w8VJ8aA3PFujr1kTlmKabeg1b+R3EmBQ6Np7rJp/213sFsROh3YnJF+kTGNk8j0XX67IV7YryOd7fw7UaGqxdvYq52QxGp939Svly98TbHdeRWhKJEt/vlvbym4HfQwVTdK3BpYqsu74d/oD+yee00dgzEH+R5lOEs8iyMjpfQKp6JtsFy2cPbe2XrweLl8kMHtFe3TOlsb8zVuTfFlSGnmxibvcUxaS7Xyl/qYzUK/HXh9N2Yf+CtwjGGbhOpde1ojt9lu+GPlJYlvTwNRkI26ZetmUlALagB17DN+eztr/r7x/yF+WHAZ/8kKHlK+Q/lx9utHyFaPkK0fIVouUrRMtXiJavEC1fIVq+QrR8hWj5CtHyFTJQLH+CLmqKznxlAL8At3LuGMPQOW4AAAAASUVORK5CYII=" InformativeScreenshot="6693f5c34ed3013195a55f09f1091dae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Course Roster: RPA Bot Test Course' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
@@ -176,7 +176,7 @@
                 </InArgument>
               </ui:ReadCsvFile.FilePath>
             </ui:ReadCsvFile>
-            <Assign sap:VirtualizedContainerService.HintSize="1079,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Initialise the dictionary" sap:VirtualizedContainerService.HintSize="1079,61" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:IDictionary(x:String, scg:List(x:String))">
                   <mca:CSharpReference x:TypeArguments="scg:IDictionary(x:String, scg:List(x:String))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">GroupDictionary</mca:CSharpReference>
@@ -188,13 +188,13 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1079,1886" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1079,1762" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1045,1765" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1045,1641" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="GroupName" />
                       <Variable x:TypeArguments="x:String" Name="Email" />
@@ -228,27 +228,27 @@
                         </OutArgument>
                       </ui:GetRowItem.Value>
                     </ui:GetRowItem>
-                    <If DisplayName="Check the group name exists" sap:VirtualizedContainerService.HintSize="1003,1223" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If DisplayName="Check the group name exists" sap:VirtualizedContainerService.HintSize="1003,1099" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">!String.IsNullOrEmpty(GroupName)</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="967,1035" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence sap:VirtualizedContainerService.HintSize="967,911" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If DisplayName="Check if group name is already in the dictionary" sap:VirtualizedContainerService.HintSize="925,942" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If DisplayName="Check if group name is already in the dictionary" sap:VirtualizedContainerService.HintSize="925,818" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">GroupDictionary.ContainsKey(GroupName)</mca:CSharpValue>
                               </InArgument>
                             </If.Condition>
                             <If.Then>
-                              <Sequence DisplayName="Add email to existing list in dictionary" sap:VirtualizedContainerService.HintSize="440,783" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Add email to existing list in dictionary" sap:VirtualizedContainerService.HintSize="440,659" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="scg:List(x:String)" Name="CurrentEmailList" />
                                 </Sequence.Variables>
@@ -313,17 +313,10 @@
                                     </InArgument>
                                   </maes:AddToDictionary.Value>
                                 </maes:AddToDictionary>
-                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="398,84" sap2010:WorkflowViewState.IdRef="MessageBox_3">
-                                  <ui:MessageBox.Text>
-                                    <InArgument x:TypeArguments="x:Object">
-                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">"Added: "+Email +", to: " + GroupName</mca:CSharpValue>
-                                    </InArgument>
-                                  </ui:MessageBox.Text>
-                                </ui:MessageBox>
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Create new list of emails in dictionary" sap:VirtualizedContainerService.HintSize="440,522" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence DisplayName="Create new list of emails in dictionary" sap:VirtualizedContainerService.HintSize="440,398" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="scg:List(x:String)" Name="NewEmailList" />
                                 </Sequence.Variables>
@@ -371,13 +364,6 @@
                                     </InArgument>
                                   </maes:AddToDictionary.Value>
                                 </maes:AddToDictionary>
-                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="398,84" sap2010:WorkflowViewState.IdRef="MessageBox_1">
-                                  <ui:MessageBox.Text>
-                                    <InArgument x:TypeArguments="x:Object">
-                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">"Added: "+Email +", to (new): " + GroupName</mca:CSharpValue>
-                                    </InArgument>
-                                  </ui:MessageBox.Text>
-                                </ui:MessageBox>
                               </Sequence>
                             </If.Else>
                           </If>
@@ -409,7 +395,7 @@
         <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFmSURBVDhPlVO9SsRAEA5iIb6EL5DsHqS7200qLXwDBV9BFOx9DC2vtLH0PY4rbC1yu4joiYWNesb5xp0hhySHHyyZzP9+M5sJ2izbkm+oRseNt9/R2xanGeef0RVlKMvdrq9CFI0v3oIzd5CDzz+6CVg3sfPozDNkTSKCOjv7yAZC9EUVvD1Iv/BZojM6q6T6RRznr5KAAs7aut5OJgXaD85eiV/0+Tsb4Lxw9haVqf1TVg4gOntOwQv63jzUezukMCfJxsmS2IsugRR7ScTZFQhLuo2QBEKykher0SF7bAC4QNcSpwlo9vvJZxC4d3DFkSbAjGXO/4EsGhFRlEnH7SWxF/BRHtA1FM3E3GMXaIxT9hoAtX9NlV+iNzMt2Pj8Se5EhgtUwIEDzxqBJK8vkl1ysLRDPHzBsLbKxDYIgww/vAP4/Bm7JqHHhK1kGS8wVQNh0KFtrdwHtIwNk2A5IEzvrMiyH9LD8KZ4eNkWAAAAAElFTkSuQmCC" InformativeScreenshot="7c7e278ca607e7d79ab31b648dc9cc24.png" Selector="&lt;html app='chrome.exe' title='RPA Bot Test Course'/&gt;" Url="https://canvas.instructure.com/courses/*" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <Assign sap:VirtualizedContainerService.HintSize="1155,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign DisplayName="Assigning the created dictionary to the output value" sap:VirtualizedContainerService.HintSize="1155,60" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IDictionary(x:String, scg:List(x:String))">
           <mca:CSharpReference x:TypeArguments="scg:IDictionary(x:String, scg:List(x:String))" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">EmailDictionary</mca:CSharpReference>
