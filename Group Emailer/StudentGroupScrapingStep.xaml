@@ -3,7 +3,7 @@
     <x:Property Name="EmailDictionary" Type="OutArgument(scg:IDictionary(x:String, scg:List(x:String)))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1159,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1968,927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -49,6 +49,9 @@
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>Microsoft.Activities.Extensions.Statements</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -162,7 +165,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,215.5 300,260</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Error catch for webscraping step" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Error catch for webscraping step" sap:VirtualizedContainerService.HintSize="1578,4435" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -192,7 +195,7 @@
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <uix:NClick ClickType="Single" ContinueOnError="False" DisplayName="Click 'People'" sap:VirtualizedContainerService.HintSize="1464,156" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Timeout="5" Version="V1">
+                  <uix:NClick ClickType="Single" ContinueOnError="False" DelayBefore="2" DisplayName="Click 'People'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b49a559-e0b0-4fcd-ad87-f9d7de5b26bf" Timeout="5" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://canvas.instructure.com/courses/5391002/users" DesignTimeRectangle="86, 403, 156, 42" ElementType="Text" FriendlyName="'People'" FullSelectorArgument="&lt;webctrl aaname='People' parentid='section-tabs' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='People' parentid='section-tabs' tag='A' type='' check:text='People' /&gt;" Guid="2d765153-4fe2-4000-980d-6e437c3b2b7a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAuCAYAAACvdRKFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7Zr9U1RVGMf7h/qhmX5oxmkcm6GxNM3MkRjLQXypfCk0RnQoNUUMU0wRm9VCK53GBp0xkwaNkCAIgngTcnwBBaII2NXlZSHgie/DPXfuvV5ubLvs2a3nM3MGOOe55+zMfvY5zznLYyQIGhEBBa2YAj4+L4mbIMQSEVDQiggoaEUEFLQiAgpaEQEFrYiAglZEQEErIqCgFRFQ0IoIKGhFBBS0MisBB/wBqqqte6T9VNdAvX/20eTkpBEZPzTdaKNX1m2iDVt30L3ObqNXiDdmJWDtL43muFtL25JBt+92GNHxgXrNzy5fRXfa7xm9QrwRtoBZ2Qfp+KkzdNRXSGs2v0NPzH+O+xcnp8aVhCJgYhC2gPjdSvXP9TRv4TIe++jjT+JmOxYBE4OIBRweHqGM9/bx2JbMXTQ4NGSMEI2N/UUtbTe5XsRP/D0TgQcPeW7E3m7voPHxcWNkGoj9MBjkOIzh7+6e3zm+saWVQqGQETmNl4B4FrUrath4rmP/D0Qs4MhIiLbvzuGx9W9vZ0nwZpZVVlPSshTzObQFL6yk4mtltjfbH3hA2YeOmVu5aotWrqbK6loz1rrOhcvFlHv0hO2ZF1etpebWXzkWzCQg1nt3/4ePrLctay/1D/iNKCFWRCxgzx+9tCL1DR7b/UEeZzm1LT+5YBHlnzzNWeqL8xdYQPSrOYaGh2nn3lx+FmOoLb8p+Y42pGdyH2IxF7AK+FTSEhY0r+AUHS44yZKhH88hQwI3Aa3rrX4zna5+X07Xpz4ob01lbvShvsU6QuwIW8CyiioaCAS41dQ3mLIgo1RU11AwOEivb93BfWe/umjLdqXlldyvREU8nntmaTK13rxlRBFvsQeOFHBs+s49LI5VQPQhkykgKaRUrwG4CXjtegXH4AODD44CWXtTRhbPgesbIXaELaBbw5taeO48i9M2JdL8xSvo6eeXU9GlK5z9VMPWibGUdZup3++nQ/k+fh41JGpJK5AKY9jGcbq2CojMZwUfBsyJMWRa4BQQry0nL5/7sN3+WGO/08zYlc1jeI1C7PjXAmLLxEUvarGOzi4z0/2TrGiQBRloJqGAEhnjmNNLQLcxp4DWGK8mAsaWiGtAJ/WNzZwRkbkamm+Y27W1YctDxlNCIBNat2qArVBtq5jTS0DMhwMQxo75CrnPKWBodNSs/w7kHXd9XWheJ3Uh+kRdwK7femhpShrHosD3wnfmHMc5r29ASWk5j2EuzOkl4P2ubr4IxxieA04Bgdd6gh6iLqD1AJG6cZut2EeGQV2ILRvg/g4nXWS5i5e/NbNgb18/P4s53s89QqNjYzYBUTMGB6cFwno4PaMfEkJG4CYgDjo48GC9oq+LaWJigvvxs66hia5cLeX5hNgRdQFBx/1OvpdDPK5icOpEw+/owykYWyLe7BOffs5CoH9JyhpKTttofrOCOXApDZw1nKpBF778Kv/tlNhNQKznO33WXA/PWudAzVnf1MKxQmyYEwFBX/8AZ0IlHRrqws++LLKdeJF9fqiqoZdeW2/G4RlkPnxDobAKmLknx3aZjHkvFZfYspebgMBtPcyDu0BkSGctKswtsxIwEiAFLodnU3MhRn3V5sStBkQf4tVWGi5e6wmxYc4FjBZuAgqJjwgoaCVhBMQ2qf6z5taddqNXSHQSRkDhv4kIKGhFBBS0IgIKWhEBBa2IgIJWREBBKyKgoBURUNCKCChoRQQUtGIKKAg6EAEFjRD9DT3Y5exDrAxBAAAAAElFTkSuQmCC" InformativeScreenshot="03e97bff19a8376b5bf13fce08c4ffd3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Course Roster: RPA Bot Test Course' /&gt;" SearchSteps="FuzzySelector, Image" />
                     </uix:NClick.Target>
@@ -528,7 +531,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,431" sap2010:WorkflowViewState.IdRef="Sequence_30">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,493" sap2010:WorkflowViewState.IdRef="Sequence_30">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -555,6 +558,7 @@
                     </InArgument>
                   </ui:MessageBox.Text>
                 </ui:MessageBox>
+                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Scraping step failed" />
               </Sequence>
             </ActivityAction>
           </Catch>
