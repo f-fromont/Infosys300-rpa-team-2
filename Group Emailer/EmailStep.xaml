@@ -3,9 +3,10 @@
     <x:Property Name="emailDict" Type="InArgument(scg:IDictionary(x:String, scg:List(x:String)))" />
     <x:Property Name="subjectString" Type="InArgument(x:String)" />
     <x:Property Name="bodyString" Type="InArgument(x:String)" />
+    <x:Property Name="emailSentString" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1968,927</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1481,927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -77,13 +78,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -127,32 +128,39 @@
               <av:PointCollection x:Key="ConnectorLocation">300,279.5 300,384.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Error handing for emailing step" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Error handing for emailing step" sap:VirtualizedContainerService.HintSize="923,2236" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch.Variables>
+              <Variable x:TypeArguments="x:String" Name="emailSentString">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String" xml:space="preserve">Email sent for: </Literal>
+                </Variable.Default>
+              </Variable>
+            </TryCatch.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rpa.informer@gmail.com" DisplayName="Use Gmail" EmailAddress="rpa.informer@gmail.com" sap:VirtualizedContainerService.HintSize="885,1909" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rpa.informer@gmail.com" DisplayName="Use Gmail" EmailAddress="rpa.informer@gmail.com" sap:VirtualizedContainerService.HintSize="885,2009" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
                 <umab:GmailApplicationCard.Body>
                   <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="851,1730" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="851,1830" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="809,1638" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="809,1614" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="Key" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="773,1514" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="773,1490" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="emailList">
                                   <Variable.Default>
@@ -296,13 +304,18 @@
                                   </InArgument>
                                 </ui:LogMessage.Message>
                               </ui:LogMessage>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="731,84" sap2010:WorkflowViewState.IdRef="MessageBox_1">
-                                <ui:MessageBox.Text>
-                                  <InArgument x:TypeArguments="x:Object">
-                                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"Email sent for: " + Key.ToString()</mca:CSharpValue>
+                              <Assign sap:VirtualizedContainerService.HintSize="731,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">emailSentString</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">emailSentString + "\n" + Key.ToString()</mca:CSharpValue>
                                   </InArgument>
-                                </ui:MessageBox.Text>
-                              </ui:MessageBox>
+                                </Assign.Value>
+                              </Assign>
                             </Sequence>
                           </ActivityAction>
                         </ui:ForEach.Body>
@@ -312,6 +325,13 @@
                           </InArgument>
                         </ui:ForEach.Values>
                       </ui:ForEach>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="809,84" sap2010:WorkflowViewState.IdRef="MessageBox_4">
+                        <ui:MessageBox.Text>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">emailSentString</mca:CSharpValue>
+                          </InArgument>
+                        </ui:MessageBox.Text>
+                      </ui:MessageBox>
                     </Sequence>
                   </ActivityAction>
                 </umab:GmailApplicationCard.Body>
