@@ -17,13 +17,15 @@ Please ensure you are using the latest version of UIPath and all required depend
 - "UiPath.System.Activities": "[21.10.5]",
 - "UiPath.UIAutomation.Activities": "[21.10.6]"
 
+Unzip the file if not already done so, and open the project in UIPath
+
 1. The BOT will need to have access to a chome browser that is logged into a canvas course. We have setup a test course at [https://canvas.instructure.com/login/canvas](https://canvas.instructure.com/login/canvas)
 
 The following login details can be used to access the course we used for testing
 Login: rpa.informer@gmail.com 
 Password: infosys300
 
-2. Once logged in you can then start the UIPath process and the BOT will ask you to enter in some details to customise the email that is being sent out to students
+2. Once logged in you can then start the UIPath process, running the "main.xaml" and the BOT will ask you to enter in some details to customise the email that is being sent out to students
 Set the email header 
 Set the email body
 If you don't enter any text, a default text will be used instead.
