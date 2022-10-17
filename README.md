@@ -1,6 +1,7 @@
 # Infosys300-rpa-team-2
 
 Software: UIPath 
+Link to Github: [https://github.com/f-fromont/Infosys300-rpa-team-2](https://github.com/f-fromont/Infosys300-rpa-team-2)
 
 ## Bot Purpose
 
