@@ -1,44 +1,47 @@
 # Infosys300-rpa-team-2
-The implementation of a group RPA project for the Infosys300/softeng762 course
 
-## Main tasks / Flow
+Software: UIPath 
 
-1. Configuration Screen
-- Allows for customisation of email to be sent to the students
-- Set email header
-- Set email body
-- Selection of any modes or forms of communication, if implemented (lecturer screen use, or robot credentials perhaps)
+## Bot Purpose
 
-2. Student group data collection
-- Either through the lecturer being logged in, or through the robots own credentials, login to Canva
-- Navigates to group tab
-- Use HTML elements to select all tags and grab the id's of the student tags, this gives group id & user id
-- Build up a dictionary which maps a group_id, to all the student id's
-- Use HTML elements to select people tags, and grab all id's and user email's
-- Build up a dictionary which maps a user_id, to an email address (possible extra identifiy information)
-- Handle any cases where a user is not in a group, or does not have a form of communication
+The following instructions will be used to access the Group mailer BOT created by Team 2 using UIPath. The purpose of the BOT is to streamline the process of group communication and create an email with all group memebers as a first point of contact
 
-3. Emailing system
-- Take in the email template shown at start
-- Take in the maps build up
-- For each group id, go through user_id's and grab emails, add to a list
-- Create an email, 
-- set the header to what lectuerer has specified,
-- set the body to what the lecturer has specified,
-- send the email,
-- if any error, make sure to log and showcase to whoever is running bot
+## Bot Process
 
-4. Summary Task
-- shows a summary of the work flow
-- things like upi's for each group, number of people in each group, email sent status
+The BOT will need to have access to a chome browser that is logged into a canvas course. We have setup a test course at [https://canvas.instructure.com/login/canvas](https://canvas.instructure.com/login/canvas)
 
-5. Email responses - optional
-- maybe monitor any emails being returned and either send a automated no-response, or maybe send an email to designated lecturer
+The following login details can be used to access the course we used for testing
+Login: rpa.informer@gmail.com 
+Password: infosys300
 
-## Things to remember
-As you are developing the tasks, remember:
-- follow naming conventions and standards used for UIPath and brought up in the course
-- Add comments for the header or start of the task to explain what it does
-- Add logging at all the important steps in a task
-- Perform error checks and validations, and log any errors
-- use recommended UI Path activites for the corresponding tasks like Input and outputs
+Once logged in you can then start the UIPath process and the BOT will ask you to enter in some details to customise the email that is being sent out to students
+Set the email header 
+Set the email body
+
+If you don't enter any text, a default text will be used instead.
+
+You will then be shown a display of what the email will look like when being sent to students, press Okay to move onto the data collection step. You will be prompted to once again ensure that a chrome tab is open to a canvas course page. You will also need to use a chrome that has the UIPath extension present.
+
+The bot will then navigate to the people tab from the homepage, and from there it will go into the group tab where it will then download an excel spreadsheet that contains the student group data.
+
+Once the file has been downloaded, the bot will begin processing the rows and build up a dictionary of the different groups with the group name as a key, and the value will be a list of strings, which are the student emails of each student in a particular group.
+
+Once this collection is built up, it will return the information to the final step of the process. 
+
+The final step is where the bot uses a Gmail integration to send customised emails using the information set at the start, these emails will be sent one at a time to all the groups.
+
+The bot will then inform you that it has finished executing.
+
+## Constraints
+
+- Please be aware that the bot does need someone with lecturer or higher access of a canvas course where student information is visible.
+- The bot also only works on chrome browsers
+- The bot will also only work on default canvas course domains, the university of auckland domain for canvas courses is not supported.
+- The bot will also need access to a gmail account, one was setup for this purpose and the credentials are listed below:
+
+Gmail Account:
+Email: rpa.informer@gmail.com
+Password: infosys300
+
+
+
