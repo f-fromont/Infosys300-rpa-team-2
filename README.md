@@ -20,7 +20,10 @@ Set the email body
 
 If you don't enter any text, a default text will be used instead.
 
-You will then be shown a display of what the email will look like when being sent to students, press Okay to move onto the data collection step. You will be prompted to once again ensure that a chrome tab is open to a canvas course page. You will also need to use a chrome that has the UIPath extension present.
+You will then be shown a display of what the email will look like when being sent to students, press Okay to move onto the data collection step. You will be prompted to once again ensure that a chrome tab is open to a canvas course page, a screenshot is included to below to show what page the bot needs you to be on. You will also need to use a chrome that has the UIPath extension present.
+
+![image](https://user-images.githubusercontent.com/66896513/196074923-ac2fd5a7-29a8-412b-a24c-170b3a97bce6.png)
+
 
 The bot will then navigate to the people tab from the homepage, and from there it will go into the group tab where it will then download an excel spreadsheet that contains the student group data.
 
