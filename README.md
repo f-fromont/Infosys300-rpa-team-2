@@ -6,7 +6,16 @@ Software: UIPath
 
 The following instructions will be used to access the Group mailer BOT created by Team 2 using UIPath. The purpose of the BOT is to streamline the process of group communication and create an email with all group memebers as a first point of contact
 
+
 ## Bot Process
+
+Please ensure you are using the latest version of UIPath and all required dependencies are installed, these are outlines in the project.json, but also listed below:
+- "Google.Apis.Gmail.v1": "[1.55.0.2510]",
+- "Microsoft.Activities.Extensions": "[2.0.6.9]",
+- "UiPath.Excel.Activities": "[2.11.4]",
+- "UiPath.Mail.Activities": "[1.12.3]",
+- "UiPath.System.Activities": "[21.10.5]",
+- "UiPath.UIAutomation.Activities": "[21.10.6]"
 
 1. The BOT will need to have access to a chome browser that is logged into a canvas course. We have setup a test course at [https://canvas.instructure.com/login/canvas](https://canvas.instructure.com/login/canvas)
 
