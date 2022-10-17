@@ -37,9 +37,11 @@ If you don't enter any text, a default text will be used instead.
 
 5. Once the file has been downloaded, the bot will begin processing the rows and build up a dictionary of the different groups with the group name as a key, and the value will be a list of strings, which are the student emails of each student in a particular group.
 
-6. Once this collection is built up, it will return the information to the final step of the process. 
+6. Once this collection is built up, it will return the information to the final step of the process. Follow the prompts to allow it to continue
 
-7. The final step is where the bot uses a Gmail integration to send customised emails using the information set at the start, these emails will be sent one at a time to all the groups.
+7. The final step is where the bot uses a Gmail integration to send customised emails using the information set at the start, these emails will be sent one at a time to all the groups. You will need to login with the RPA gmail, and allow it to send emails, the checkboxes are shown below:
+![image](https://user-images.githubusercontent.com/66896513/196076347-7abba8dd-6e4a-4ed5-8da4-b33d77b8ef89.png)
+
 
 8. The bot will then inform you that it has finished executing, and emails will have been sent to the students, an example is shown below
 ![image](https://user-images.githubusercontent.com/66896513/196075156-369cedc0-9bca-4d8f-a8b1-3b12d9962dcf.png)
